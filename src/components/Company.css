@@ -1,0 +1,37 @@
+.Company{
+    background-color: cadetblue;
+    margin: 5rem;
+    padding: 1rem;
+    width: 40%;
+    min-height: 10rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sales_details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.sales_details input{
+    /* position: relative; */
+    width: 100%;
+}
+
+.root_button button{
+    margin: 10px;
+    width: 30%;
+    height: 2rem;
+    background-color: chartreuse;
+    border: none;
+  }
