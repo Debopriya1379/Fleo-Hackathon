@@ -1,13 +1,17 @@
-.Company{
+/* .Company{
+    display: flex;
+    flex-direction: column;
+} */
+.data{
     background-color: cadetblue;
-    margin: 5rem;
+    margin: .5rem 2rem;
     padding: 1rem;
-    width: 40%;
-    min-height: 10rem;
+    width: 20rem;
+    height: 12rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
 }
 
@@ -30,8 +34,14 @@
 
 .root_button button{
     margin: 10px;
-    width: 30%;
+    padding: 2px;
+    width: 5em;
     height: 2rem;
     background-color: chartreuse;
     border: none;
-  }
+}
+
+.sub_data{
+    width: auto;
+    display: flex;
+}

@@ -6,13 +6,6 @@ function App() {
 
   const [collapse,setCollaps] = useState(false);
 
-  const Data =
-  [
-    {"name": "AJaay"},
-    {"name": "Bijoy"},
-    {"name": "Sujoy"}
-  ]
-
 const newData=
       [
         {
@@ -101,14 +94,15 @@ const newData=
         <h1>Company Status</h1>
       </header>
       <div className="root_button">
-        <button onClick={()=>{setCollaps(!collapse)}} >Collaps</button>
+        <button onClick={()=>{setCollaps(!collapse)}} >Data</button>
       </div>
-
-      {collapse && newData.map((data)=>{
-        return(
-          <Company company={data.company} percentage={data.percentage} total_sale={data.total_sale} target_sale={data.target_sale} subdata={data.subdata} />
-        )
-      })}
+      <div className="main">
+        {collapse && newData.map((data)=>{
+          return(
+            <Company company={data.company} percentage={data.percentage} total_sale={data.total_sale} target_sale={data.target_sale} subdata={data.subdata} />
+          )
+        })}
+      </div>
       
     </div>
   )
