@@ -1,7 +1,9 @@
-/* .Company{
-    display: flex;
-    flex-direction: column;
-} */
+.Company{
+    border: 2px solid black;
+}
+.Company > *{
+    margin: 10px;;
+}
 .data{
     background-color: cadetblue;
     margin: .5rem 2rem;
@@ -24,12 +26,22 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: .5rem;
     align-items:center;
 }
 
 .sales_details input{
-    /* position: relative; */
+    -webkit-appearance: none;
+    background: tomato;
     width: 100%;
+    height: .2rem;
+    background:whitesmoke;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+.sales_details input::-webkit-slider-runnable-track{
+    background-color: tomato;
+    border-radius: 20px;
 }
 
 .root_button button{

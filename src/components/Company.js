@@ -1,5 +1,6 @@
 import {React,useState} from 'react';
 import './Company.css'
+import { Progressbar } from './Progressbar';
 
 const Company = ({company,percentage,total_sale,target_sale,subdata}) => {
 
@@ -15,16 +16,17 @@ const Company = ({company,percentage,total_sale,target_sale,subdata}) => {
         <div className="sales_details">
             <p>Total sale :{total_sale}</p>
             <p>Target sale :{target_sale}</p>
-            <input type="range" value={percentage} name="" id="" />
+            {/* <input type="range" value={percentage} name="" id="range-bar" /> */}
+            <Progressbar percentage={percentage}/>
         </div>
         <div className="root_button">
           <button onClick={()=>{setlevelOne(!levelOne)}} >sub-comps</button>
         </div>
       </div>
       <div className="sub_data">
-          {levelOne && subdata.map((data)=>{
+          {levelOne && subdata.map((data,id)=>{
             return(
-              <Company company={data.company} percentage={data.percentage} total_sale={data.total_sale} target_sale={data.target_sale} subdata={data.subdata} />
+              <Company key={id} company={data.company} percentage={data.percentage} total_sale={data.total_sale} target_sale={data.target_sale} subdata={data.subdata} />
             )
           })}
         </div>

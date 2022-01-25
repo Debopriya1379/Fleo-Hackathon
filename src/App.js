@@ -31,8 +31,8 @@ const newData=
                         },
                         {
                             "company" : "Godown B",
-                            "percentage" : "50",
-                            "total_sale" : "200cr",
+                            "percentage" : "75",
+                            "total_sale" : "300cr",
                             "target_sale" : "400cr",
                             "subdata" : []
                         }
@@ -54,9 +54,9 @@ const newData=
                         },
                         {
                             "company" : "Godown B",
-                            "percentage" : "50",
-                            "total_sale" : "200cr",
-                            "target_sale" : "400cr",
+                            "percentage" : "40",
+                            "total_sale" : "20cr",
+                            "target_sale" : "50cr",
                             "subdata" : []
                         }
                     ]
@@ -77,9 +77,9 @@ const newData=
                         },
                         {
                             "company" : "Godown B",
-                            "percentage" : "50",
-                            "total_sale" : "200cr",
-                            "target_sale" : "400cr",
+                            "percentage" : "40",
+                            "total_sale" : "20cr",
+                            "target_sale" : "50cr",
                             "subdata" : []
                         }
                     ]
@@ -97,9 +97,9 @@ const newData=
         <button onClick={()=>{setCollaps(!collapse)}} >Data</button>
       </div>
       <div className="main">
-        {collapse && newData.map((data)=>{
+        {collapse && newData.map((data,id)=>{
           return(
-            <Company company={data.company} percentage={data.percentage} total_sale={data.total_sale} target_sale={data.target_sale} subdata={data.subdata} />
+            <Company key={id} company={data.company} percentage={data.percentage} total_sale={data.total_sale} target_sale={data.target_sale} subdata={data.subdata} />
           )
         })}
       </div>
